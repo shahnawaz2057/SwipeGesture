@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ContainerVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ContainerVC" customModule="SwipeGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="exk-i4-9pc">
+                                <rect key="frame" x="0.0" y="36" width="320" height="57"/>
+                                <subviews>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xA6-bP-gmZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="57"/>
+                                        <color key="backgroundColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Home"/>
+                                        <connections>
+                                            <action selector="btnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nBU-Ok-UnA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ird-Tz-T2x">
+                                        <rect key="frame" x="106.5" y="0.0" width="107" height="57"/>
+                                        <color key="backgroundColor" red="0.19215686269999999" green="0.61960784310000006" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Discover"/>
+                                        <connections>
+                                            <action selector="btnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ash-08-HFe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbF-ta-dgq">
+                                        <rect key="frame" x="213.5" y="0.0" width="106.5" height="57"/>
+                                        <color key="backgroundColor" red="0.99486881490000001" green="0.2832221687" blue="0.22087633609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Alert"/>
+                                        <connections>
+                                            <action selector="btnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yU6-E1-OrV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.7843137255" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="weJ-HB-P9I"/>
+                                </constraints>
+                            </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0vY-V4-d8K">
+                                <rect key="frame" x="0.0" y="93" width="320" height="475"/>
+                                <connections>
+                                    <segue destination="30z-5y-q6r" kind="embed" id="meg-aB-e9w"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0vY-V4-d8K" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1sU-d3-k2G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0vY-V4-d8K" secondAttribute="bottom" id="H2z-8Q-wdx"/>
+                            <constraint firstItem="exk-i4-9pc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="KNr-Ka-gb5"/>
+                            <constraint firstItem="exk-i4-9pc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="biw-Di-uNM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="exk-i4-9pc" secondAttribute="trailing" id="iwn-eL-hhL"/>
+                            <constraint firstItem="0vY-V4-d8K" firstAttribute="top" secondItem="exk-i4-9pc" secondAttribute="bottom" id="oOr-F3-pAL"/>
+                            <constraint firstItem="0vY-V4-d8K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sYB-Mx-z6k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="0vY-V4-d8K" id="mKj-fW-cQR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="k9i-XQ-ThR">
+            <objects>
+                <viewController storyboardIdentifier="homeVC" id="30z-5y-q6r" customClass="HomeViewController" customModule="SwipeGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xrG-uq-ewq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvY-e7-MJh">
+                                <rect key="frame" x="108" y="227" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43921568630000002" green="0.1843137255" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="tvY-e7-MJh" firstAttribute="centerY" secondItem="xrG-uq-ewq" secondAttribute="centerY" id="Ar4-By-HAx"/>
+                            <constraint firstItem="tvY-e7-MJh" firstAttribute="centerX" secondItem="xrG-uq-ewq" secondAttribute="centerX" id="Vjn-5R-v6r"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dbs-la-Vr1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="827"/>
+        </scene>
+        <!--Discover View Controller-->
+        <scene sceneID="4KC-wj-dBu">
+            <objects>
+                <viewController storyboardIdentifier="discoverVC" id="mRn-VX-IOI" customClass="DiscoverViewController" customModule="SwipeGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g3W-u2-NgU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vte-kT-PWx">
+                                <rect key="frame" x="97.5" y="273.5" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vte-kT-PWx" firstAttribute="centerY" secondItem="g3W-u2-NgU" secondAttribute="centerY" id="S3g-sW-jti"/>
+                            <constraint firstItem="vte-kT-PWx" firstAttribute="centerX" secondItem="g3W-u2-NgU" secondAttribute="centerX" id="m6r-hV-7Cf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hFy-iJ-Eqc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wr3-t8-414" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="759" y="876"/>
+        </scene>
+        <!--Alert View Controller-->
+        <scene sceneID="FKe-pu-eP0">
+            <objects>
+                <viewController storyboardIdentifier="alertVC" id="L9R-W9-WEc" customClass="AlertViewController" customModule="SwipeGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="59h-kz-AFk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHv-HV-5EQ">
+                                <rect key="frame" x="112.5" y="273.5" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91372549020000005" green="0.30980392159999998" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="VHv-HV-5EQ" firstAttribute="centerY" secondItem="59h-kz-AFk" secondAttribute="centerY" id="GrV-bw-Rbj"/>
+                            <constraint firstItem="VHv-HV-5EQ" firstAttribute="centerX" secondItem="59h-kz-AFk" secondAttribute="centerX" id="j2O-7X-Abs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kdm-6L-szn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Rp-pH-fK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1425" y="876"/>
+        </scene>
+    </scenes>
+</document>
