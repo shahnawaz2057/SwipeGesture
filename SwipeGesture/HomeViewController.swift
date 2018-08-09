@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        //sample
+        //sample text
     }
 
     override func didReceiveMemoryWarning() {
