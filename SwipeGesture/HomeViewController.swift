@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         print("This is master branch")
         print("This is branch 1")
+        
+        print("New addition to branch 1")
     }
 
     override func didReceiveMemoryWarning() {
